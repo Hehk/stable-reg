@@ -10,6 +10,6 @@ def image_to_latents(image, vae, torch_device="cuda"):
 
 # helper to see what the latents look like
 def view_latents(latents):
-  _, axs = plt.subplot(1, 4, figsize=(16,4)) 
+  _, axs = plt.subplots(1, 4, figsize=(16,4)) 
   for channel in range(4):
     axs[channel].imshow(latents[0][channel].cpu(), cmap="Greys")
